@@ -1,0 +1,10 @@
+<table class="custom-table">
+  <tr>
+    <th *ngFor="let col of columns">{{ col }}</th>
+  </tr>
+  <tr *ngFor="let data of tableData; let i = index" id="{{ i }}">
+    <td *ngFor="let col of columns">
+      {{data?.[col]}}
+    </td>
+  </tr>
+</table>
